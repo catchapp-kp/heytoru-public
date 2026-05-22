@@ -6,82 +6,343 @@
   <title>Privacy Policy — Hey Toru!</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #FAF8F5;
+      color: #2A2722;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    header {
       background: #2A2722;
-      color: #EBEBEB;
-      line-height: 1.7;
-      padding: 48px 24px;
+      padding: 48px 24px 40px;
+      text-align: center;
     }
-    .container { max-width: 680px; margin: 0 auto; }
-    .brand { color: #CB9967; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-    .tagline { color: rgba(235,235,235,0.45); font-size: 14px; margin-bottom: 48px; }
-    h1 { font-size: 22px; font-weight: 700; color: #DBCB99; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(235,235,235,0.4); margin-bottom: 48px; }
-    h2 { font-size: 16px; font-weight: 600; color: #CB9967; margin: 36px 0 12px; text-transform: uppercase; letter-spacing: 0.08em; }
-    p { font-size: 15px; color: rgba(235,235,235,0.75); margin-bottom: 16px; }
-    .highlight {
-      background: rgba(203,153,103,0.12);
-      border-left: 3px solid #CB9967;
-      padding: 16px 20px;
-      border-radius: 0 10px 10px 0;
-      margin: 24px 0;
+
+    header .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #CB9967;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
     }
-    .highlight p { color: rgba(235,235,235,0.9); margin: 0; }
-    a { color: #CB9967; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .footer {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(235,235,235,0.08);
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #DBCB99;
+      margin-bottom: 12px;
+    }
+
+    header .dates {
+      font-size: 13px;
+      color: rgba(235,235,235,0.45);
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .intro {
+      background: #FFFFFF;
+      border-left: 4px solid #CB9967;
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #3A3530;
+    }
+
+    section {
+      margin-bottom: 52px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2A2722;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #CB9967;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #CB9967;
+      margin: 28px 0 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #3A3530;
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 12px 0 20px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      padding: 6px 0 6px 24px;
+      position: relative;
+      color: #3A3530;
+      font-size: 15px;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: #CB9967;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: #FFFFFF;
+      border: 1px solid #E8E4DC;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .contact-block {
+      background: #2A2722;
+      border-radius: 12px;
+      padding: 28px 32px;
+      color: #DBCB99;
+    }
+
+    .contact-block p {
+      color: rgba(235,235,235,0.75);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .contact-block a {
+      color: #CB9967;
+      text-decoration: none;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-block .contact-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: #DBCB99;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      background: #2A2722;
+      text-align: center;
+      padding: 28px 24px;
       font-size: 13px;
       color: rgba(235,235,235,0.35);
+    }
+
+    footer a {
+      color: #CB9967;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 36px 20px 28px; }
+      header .logo { font-size: 26px; }
+      .container { padding: 36px 20px 60px; }
+      h2 { font-size: 18px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="brand">Hey Toru!</div>
-    <div class="tagline">Your thoughts, beautifully captured.</div>
 
+  <header>
+    <div class="logo">Hey Toru!</div>
     <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: May 14, 2026</div>
+    <div class="dates">Effective Date: June 27, 2026 &nbsp;·&nbsp; Last Updated: June 27, 2026</div>
+  </header>
 
-    <div class="highlight">
-      <p>Hey Toru! is built on one principle: your thoughts belong to you. This privacy policy explains exactly what we do and do not do with your data — in plain language, not legal fog.</p>
+  <div class="container">
+
+    <div class="intro">
+      Hey Toru! is operated by Krishna Prasad ("we", "us", or "our"). This Privacy Policy explains how we collect, use, store, and protect information in connection with your use of the Hey Toru! mobile application ("the App"). It applies to all users regardless of country of residence, including users in the United States, the European Union, the United Kingdom, and all other regions where the App is available. By using the App, you acknowledge that you have read and understood this Privacy Policy.
     </div>
 
-    <h2>What We Collect</h2>
-    <p>Hey Toru! does not collect personal information. We do not require an account, email address, or any form of registration to use the app.</p>
+    <!-- 1 -->
+    <section>
+      <h2>1. Information We Collect</h2>
 
-    <h2>Your Notes</h2>
-    <p>Every note you capture is stored only on your device using Apple's secure local storage. Your notes never leave your device automatically. They are never uploaded to any server, never backed up to our systems, and never shared with anyone.</p>
-    <p>If you choose to use the Backup feature, your notes are saved as a file that you control entirely. You decide where it goes — Files, iCloud, email, or anywhere else. We never receive or store this file.</p>
+      <h3>1.1 Information You Provide</h3>
+      <p>The App is designed for personal note capture. When you use the App, you may provide:</p>
+      <ul>
+        <li>Text you type directly into the App</li>
+        <li>Voice recordings you choose to make using the App's voice capture feature</li>
+        <li>Transcriptions generated from your voice input</li>
+        <li>Any other content you choose to enter, including notes, lists, and personal thoughts</li>
+      </ul>
+      <p>You are in full control of what you provide. The App does not require you to create an account, provide your name, or share any personal identifiers to use its core functionality.</p>
 
-    <h2>Your Voice</h2>
-    <p>When you use the Speak feature, your voice is processed entirely on your device by Apple's iOS speech recognition system. Hey Toru! never records, stores, or transmits your voice or audio to any server.</p>
+      <h3>1.2 Information Generated Automatically</h3>
+      <p>We do not collect device identifiers, IP addresses, usage analytics, crash reports, or behavioural data. The App contains no analytics software, no advertising SDKs, and no third-party tracking tools of any kind.</p>
+      <p>The only automated process that occurs is the temporary transmission of your note content to our processing server for the purpose of structuring your notes using intelligent automation. This transmission is described in detail in Section 3.</p>
 
-    <h2>Text Processing</h2>
-    <p>When you tap Catch it, the text you have typed or spoken is sent securely to Hey Toru!'s server for intelligent structuring. This is the only data that leaves your device. Once your structured note is returned, this text is immediately discarded from our server. It is never stored, never logged, and never used for any other purpose.</p>
+      <h3>1.3 Subscription Information</h3>
+      <p>If you choose to purchase a paid subscription (Toru Pro or Toru Smart), the transaction is processed entirely by Apple through the App Store. We do not receive, store, or have access to your payment card details, billing address, or any financial information. Apple's privacy policy governs the handling of your payment data.</p>
 
-    <h2>Your Name</h2>
-    <p>If you enter your name during onboarding, it is stored only on your device. It is never sent to any server.</p>
+      <h3>1.4 Voice Recordings (Toru Smart — Optional)</h3>
+      <p>Toru Smart subscribers may choose to enable the optional voice recording storage feature. When enabled, the original audio recording of a voice-captured note is stored locally on your device alongside the structured note. This feature is disabled by default and must be explicitly activated by the user.</p>
+      <p>Voice recordings stored under this feature never leave your device. They are not transmitted to our servers, not shared with any third party, and not uploaded to any cloud service by us. They are deleted automatically when you delete the associated note.</p>
+    </section>
 
-    <h2>What We Do Not Do</h2>
-    <p>Hey Toru! does not display advertisements. Hey Toru! does not sell your data. Hey Toru! does not use tracking or analytics. Hey Toru! does not share any information with third parties. Hey Toru! does not use cookies or any form of cross-app tracking.</p>
+    <!-- 2 -->
+    <section>
+      <h2>2. How We Store Your Information</h2>
 
-    <h2>Children</h2>
-    <p>Hey Toru! is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+      <h3>2.1 On-Device Storage</h3>
+      <p>All notes, lists, transcriptions, and voice recordings are stored locally on your device. This data does not leave your device except as described in Section 3 (processing) and Section 2.2 (iCloud backup).</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>If we ever change this privacy policy in a meaningful way, we will notify you through the app. The date at the top of this page reflects the most recent update.</p>
+      <h3>2.2 iCloud Backup</h3>
+      <p>If you have enabled iCloud backup on your device and the App's iCloud backup feature is turned on, your notes and lists may be included in your iCloud backup. This backup is governed by Apple's iCloud terms and privacy policy. We do not control, access, or interact with your iCloud data.</p>
 
-    <h2>Contact</h2>
-    <p>Questions about privacy? We are happy to talk. Reach us at <a href="mailto:admin@heytoru.com">admin@heytoru.com</a>.</p>
+      <h3>2.3 Our Servers</h3>
+      <p>We do not maintain a user database. We do not store your notes, transcriptions, account information, or any personally identifiable information on our servers. Our server infrastructure is used solely as a processing relay as described in Section 3.</p>
+    </section>
 
-    <div class="footer">
-      &copy; 2026 Hey Toru! &nbsp;&middot;&nbsp; <a href="mailto:admin@heytoru.com">admin@heytoru.com</a> &nbsp;&middot;&nbsp; <a href="https://heytoru.com">heytoru.com</a>
-    </div>
+    <!-- 3 -->
+    <section>
+      <h2>3. How We Process Your Information</h2>
+
+      <h3>3.1 Intelligent Automation Processing</h3>
+      <p>When you choose to structure a note using the App, your note content is temporarily transmitted to our processing server. Our server forwards this content to Anthropic PBC, a third-party artificial intelligence service provider, which structures and returns the content. The structured note is then returned to your device.</p>
+      <p>This process is transient. Neither our server nor Anthropic's API retains your note content after the processing request is completed. Your content exists on our server only for the duration of the network request, measured in seconds.</p>
+      <p>In accordance with applicable transparency requirements, including Article 50 of the EU AI Act, we disclose that intelligent automation is used to process and structure the content of your notes. This automation assists in organising your thoughts. It does not make decisions about you, assess your behaviour, profile you, or infer sensitive characteristics from your content.</p>
+
+      <h3>3.2 Anthropic PBC — Third-Party Processor</h3>
+      <p>Anthropic PBC is our sole third-party data processor. Your note content is transmitted to Anthropic solely for the purpose of structuring your notes. Anthropic's processing is governed by their API usage policies and privacy documentation, available at <a href="https://anthropic.com" style="color:#CB9967;">anthropic.com</a>.</p>
+      <p>Under Anthropic's standard API terms, API requests are not used to train AI models without separate consent.</p>
+
+      <h3>3.3 Server Infrastructure</h3>
+      <p>Our processing server is currently hosted in the United States. We are in the process of migrating our server infrastructure to a European Union region to achieve full EU data residency. Until that migration is complete, note content transmitted for processing may pass through servers located in the United States before being returned to your device.</p>
+      <p>This transfer is subject to appropriate safeguards consistent with applicable data protection law. The transfer is necessary for the performance of the service you have explicitly requested, and all data involved is transient and not retained on our servers.</p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2>4. Legal Basis for Processing (European Users)</h2>
+      <p>For users in the European Economic Area, the United Kingdom, and Switzerland, we rely on the following legal bases under the General Data Protection Regulation (GDPR) and applicable national law:</p>
+      <ul>
+        <li><strong>Performance of a service:</strong> The temporary transmission of your note content for processing is necessary to provide the intelligent note structuring feature you have explicitly requested.</li>
+        <li><strong>Consent:</strong> The optional voice recording storage feature (Toru Smart) is activated only upon your explicit opt-in. You may withdraw this consent at any time by disabling the feature in the App settings.</li>
+        <li><strong>Legitimate interests:</strong> We maintain the security of our server infrastructure, including the use of a shared authentication secret to prevent unauthorised access to our processing endpoint.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2>5. Your Rights</h2>
+
+      <h3>5.1 All Users</h3>
+      <p>Because all of your data is stored locally on your device, you exercise full control over it at all times. You may:</p>
+      <ul>
+        <li>View all your notes and data within the App at any time</li>
+        <li>Delete any note, list, or recording at any time — deletion is immediate and permanent</li>
+        <li>Delete the App entirely from your device, which removes all locally stored data</li>
+        <li>Disable the voice recording feature at any time from the App settings</li>
+        <li>Disable iCloud backup for the App at any time from your device settings</li>
+      </ul>
+
+      <h3>5.2 European Users — GDPR Rights</h3>
+      <p>If you are located in the European Economic Area, United Kingdom, or Switzerland, you have additional rights under the GDPR, including the right to access, rectification, erasure, restriction of processing, data portability, and the right to object to processing. You also have the right to lodge a complaint with your local data protection supervisory authority.</p>
+      <p>Given the architecture of the App — where all data is stored on your device and our servers retain no user data — most of these rights are exercised directly through your device. For any requests that cannot be addressed through the App itself, please contact us using the details in Section 11.</p>
+
+      <h3>5.3 California Users</h3>
+      <p>We respect the privacy rights of California residents. While Hey Toru! at its current scale does not meet the thresholds that trigger mandatory compliance with the California Consumer Privacy Act (CCPA), we voluntarily apply the following principles to all California users:</p>
+      <ul>
+        <li>We do not sell your personal information to any third party, for any purpose, monetary or otherwise</li>
+        <li>We do not share your personal information for cross-context behavioural advertising</li>
+        <li>The only third-party transmission that occurs is the transient processing of note content by Anthropic PBC, which constitutes a service provider relationship — not a sale</li>
+        <li>You may request information about what data we hold about you at any time by contacting us at admin@heytoru.com. Given that all user data is stored on-device only, we hold no personal data about you on our systems</li>
+      </ul>
+      <p>As Hey Toru! grows, we will review our CCPA obligations and update this policy accordingly.</p>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2>6. Do Not Track</h2>
+      <p>Some browsers and devices allow users to transmit a "Do Not Track" signal to indicate that they do not wish to be tracked across websites and applications. The App does not track users across third-party websites or applications, does not use cross-context advertising, and contains no behavioural tracking technology of any kind. Accordingly, Do Not Track signals do not alter the App's behaviour, as no tracking of this nature occurs in the first place.</p>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2>7. Data Retention</h2>
+      <p>Your notes, lists, and transcriptions are retained on your device for as long as you choose to keep them. You may delete individual items or all data at any time through the App.</p>
+      <p>Optional voice recordings (Toru Smart) are retained on your device for as long as the associated note exists. When you delete a note, the associated voice recording is deleted with it.</p>
+      <p>Our processing server retains no user content. All transmitted content is discarded immediately upon completion of the processing request.</p>
+      <p>Subscription transaction records are retained by Apple in accordance with their policies. We do not maintain independent records of your subscription transactions beyond what Apple provides to us.</p>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2>8. Security &amp; Data Breach Notification</h2>
+
+      <h3>8.1 Security Measures</h3>
+      <p>We take the security of your information seriously. The following measures are in place:</p>
+      <ul>
+        <li>All communication between the App and our processing server uses HTTPS encryption in transit</li>
+        <li>Our server endpoint is protected by a shared authentication secret — requests without valid authentication are rejected automatically</li>
+        <li>The Anthropic API key used by our server is stored as an encrypted environment variable and is never exposed in application code or public repositories</li>
+        <li>The App supports Face ID and device passcode protection, which you may enable from the App settings</li>
+        <li>We maintain spend limits on our API processing account to limit exposure in the event of unauthorised access</li>
+      </ul>
+      <p>No method of transmission over the internet or method of electronic storage is completely secure. While we use commercially reasonable means to protect your information, we cannot guarantee absolute security.</p>
+
+      <h3>8.2 Data Breach Notification</h3>
+      <p>In the event of a security breach that compromises your personal information, we will notify affected users without undue delay and in accordance with applicable law. For users in the European Economic Area, notification will be made within 72 hours of our becoming aware of the breach where required by GDPR. For users in other jurisdictions, we will comply with applicable state and national breach notification requirements.</p>
+      <p>Given that the App stores all user data locally on-device and our servers retain no user content, the scope of any potential server-side breach is inherently limited. In the event that a breach of our server infrastructure occurs, we will assess the impact and notify users if their information has been or is reasonably likely to have been affected.</p>
+      <p>Breach notifications will be delivered via the email address associated with your account where available, or through a notice posted within the App and on heytoru.com.</p>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2>9. Children's Privacy</h2>
+      <p>The App is not directed to children under the age of 13 in the United States, or under the applicable minimum age in other jurisdictions (13 in most countries, 16 in certain EU member states). We do not knowingly collect personal information from children below the applicable minimum age.</p>
+      <p>If you believe a child has provided personal information through the App, please contact us at <a href="mailto:admin@heytoru.com" style="color:#CB9967;">admin@heytoru.com</a> and we will take appropriate steps to address the situation promptly.</p>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, the App's features, or applicable law. When we make material changes, we will update the effective date at the top of this policy and, where appropriate, notify users through the App.</p>
+      <p>This policy is written by data category and processing purpose, not by specific feature. This means that as the App evolves — including the addition or removal of features — this policy remains accurate provided the categories of data collected and the purposes of processing remain consistent. Where new categories of data or new processing purposes are introduced, this policy will be updated accordingly.</p>
+      <p>Your continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <h2>11. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or our handling of your information, please contact us:</p>
+      <div class="contact-block">
+        <div class="contact-name">Hey Toru!, operated by Krishna Prasad</div>
+        <p>Email: <a href="mailto:admin@heytoru.com">admin@heytoru.com</a></p>
+        <p>Website: <a href="https://heytoru.com">heytoru.com</a></p>
+        <p style="margin-top:16px; font-size:14px;">We will respond to all legitimate requests within a reasonable timeframe and in any event within 30 days, as required by applicable law.</p>
+      </div>
+    </section>
+
   </div>
+
+  <footer>
+    <p>© 2026 Hey Toru! &nbsp;·&nbsp; <a href="https://heytoru.com">heytoru.com</a> &nbsp;·&nbsp; <a href="https://catchapp-kp.github.io/heytoru-public/support.html">Support</a></p>
+    <p style="margin-top:8px;">™ HEY TORU!</p>
+  </footer>
+
 </body>
 </html>
